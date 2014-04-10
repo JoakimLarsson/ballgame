@@ -40,11 +40,11 @@ static update_ball()
   ball_posy += ball_diry;
 
   // lousy bounce detect
-  if (ball_posx < 0 || ball_posx > (xres << 4)){
+  if (ball_posx <= 0 || ball_posx > (xres << 4)){
     ball_dirx = -ball_dirx;
     ball_posx += ball_dirx;
   }
-  if (ball_posy < 0 || ball_posy > (yres << 4)){
+  if (ball_posy <= 0 || ball_posy > (yres << 4)){
     ball_diry = -ball_diry;
     ball_posy += ball_diry;
   }
