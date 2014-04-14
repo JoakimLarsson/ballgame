@@ -3,7 +3,7 @@
 
 #include "ballgame.h"
 
-bg_clear(int col)
+void bg_clear(int col)
 {
   initscr();
   cbreak(); 
@@ -13,7 +13,7 @@ bg_clear(int col)
   keypad(stdscr, TRUE);  
 }
 
-bg_getres(int *xres, int *yres)
+void bg_getres(int *xres, int *yres)
 {
   char *tmp;
 
@@ -24,12 +24,12 @@ bg_getres(int *xres, int *yres)
     *yres = ((tmp = getenv("LINES"))   != NULL ? atoi(tmp) : 50);
 }
 
-bg_setpixel(int x, int y, int col)
+void bg_setpixel(int x, int y, int col)
 {
   mvaddch(y, x, col == BLACK ? ' ' : '*');
 }
 
-bg_update()
+void bg_update()
 {
   refresh();
 }
