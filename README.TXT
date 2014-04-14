@@ -1,3 +1,3 @@
-This is a part of an innovation day at my work, similar to Google Day
+This project contains small bits in pieces for simple (semi)character based games and animations.
 
 Joakim
